@@ -11,4 +11,16 @@ const fromEuroToDollar = function(valueInEuro) {
     return valueInDollar;
 }
 
-module.exports = { sum, fromEuroToDollar };
+function fromDollarToYen (dollars) {
+    const euros = dollars / 1.07;
+    const yen = euros * 156.5;
+    return yen;
+}
+
+function fromYenToPounds (yen) {
+    const euros = yen / 156.5;
+    const pounds = euros * 0.87;
+    return pounds;
+}
+
+module.exports = { sum, fromEuroToDollar, fromDollarToYen , fromYenToPounds};
