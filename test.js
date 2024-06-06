@@ -16,15 +16,14 @@ test("One euro should be 1.07 dollars", function() {
      expect(dollars).toBe(expected);
 })
 
-test("1000 dolars is around ? yens", () => {
+test("1000 dolars is around 146261 yens", () => {
     const yen = fromDollarToYen(1000);
     const expected = (1000 / 1.07) * 156.5;
     expect(yen).toBe(expected);
 })
 
-test("1000 yens is ? pounds", () => {
+test("1000 yens is 5.55 pounds", () => {
     const pounds = fromYenToPounds(1000);
     const expected = (1000 / 156.5) * 0.87;
-    console.log(expected);
     expect(pounds).toBe(expected);
 })
